@@ -2,7 +2,7 @@
 
 # Get current folder
 $basePath = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$phase2 = "$basePath\setup_phase2.ps1"
+$phase2 = "$basePath\2apps.ps1"
 
 # Ask for laptop number (1–9999)
 do {
