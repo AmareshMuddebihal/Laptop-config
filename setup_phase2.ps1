@@ -44,18 +44,18 @@ robocopy "C:\Users\$currentUser" "D:\Users_Backup\$currentUser" /E /COPYALL /R:2
 
 # Zoho (manual step)
 Write-Log "Installing Zoho Agent"
-Start-Process "$appPath\zoho.exe"
+Start-Process "$appPath\DefaultRemoteOffice_Agent.exe"
 Read-Host "Complete Zoho setup (enter 4-digit code), then press ENTER"
 
 # GCPW
 Write-Log "Installing GCPW"
-Start-Process "$appPath\gcpw.exe" -ArgumentList "/silent /install" -Wait
+Start-Process "$appPath\gcpwstandaloneenterprise64 [ NEW ].exe" -ArgumentList "/silent /install" -Wait
 
 # SentinelOne
 Write-Log "Installing SentinelOne"
 $token = Read-Host "Enter SentinelOne Token"
 
-Start-Process "$appPath\sentinelone.exe" `
+Start-Process "$appPath\SentinelOneInstaller_windows_64bit_v25_1_3_334.exe" `
  -ArgumentList "/SITE_TOKEN=$token /quiet" `
  -Wait
 
